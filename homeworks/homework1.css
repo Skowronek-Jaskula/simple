@@ -1,0 +1,39 @@
+.wrapper {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  height: 100vh;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--sbne-mid-gray);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 24px;
+  width: 400px;
+}
+
+.card__description {
+  margin-top: 0;
+}
+
+.card__button {
+  border: solid 1px;
+  font-family: inherit;
+  font-size: 16px;
+  margin-top: 16px;
+  padding: 8px 32px;
+}
+
+.card__button--secondary {
+  background-color: var(--sbne-mid-gray);
+  border-color: var(--sbne-dark-gray);
+}
+
+.card__button--primary {
+  background-color: var(--sbne-color-main);
+  border-color: var(--sbne-dark-gray);
+  color: var(--sbne-white);
+}

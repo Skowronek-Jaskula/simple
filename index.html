@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple but not Easy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+
+  <body>
+    <nav class="nav">
+      <a class="current" href="/">home</a>
+      <a href="/inline-styling.html">inline styling</a>
+      <!-- 
+<a href="/class-naming.html">class naming</a>
+-->
+      <a href="/display-inline-block.html">display: inline / block</a>
+      <a href="/display-flex.html">flexbox</a>
+      <a href="/homeworks/homework1.html">homework 1</a>
+      <a href="/quizes/quiz-1.html">quiz 1</a>
+    </nav>
+    <h1>CONTROL YOUR CSS <span class="yellow">CODE</span>:</h1>
+    <div class="theory">
+      <div class="theory__element theory__element--full-width">
+        <p class="theory__heading">Control means:</p>
+        <ul class="theory__list">
+          <li class="theory__list-item">no style conflicts,</li>
+          <li class="theory__list-item">
+            no doubts whether a certain style is necessary,
+          </li>
+          <li class="theory__list-item">no accidental overriding of styles,</li>
+          <li class="theory__list-item">
+            no endless tasks related to bugs in displaying certain elements,
+          </li>
+          <li class="theory__list-item--italic">
+            …because we want to work efficiently and effectively :)
+          </li>
+        </ul>
+      </div>
+
+      <div class="theory__element">
+        <p class="theory__heading">
+          1. <span class="yellow">Inheriting</span> styling rules:
+        </p>
+        <ul class="theory__list">
+          <li class="theory__list-item">font-family</li>
+          <li class="theory__list-item">font-size</li>
+          <li class="theory__list-item">font-weight</li>
+          <li class="theory__list-item">color</li>
+          <li class="theory__list-item">line-height</li>
+          <li class="theory__list-item">text-align</li>
+          <li class="theory__list-item theory__list-item--italic">
+            …and many more (mostly <span class="yellow">font-specific</span>)
+          </li>
+        </ul>
+      </div>
+
+      <div class="theory__element">
+        <p class="theory__heading">2. Three ways to define styles in CSS:</p>
+        <ul class="theory__list">
+          <li class="theory__list-item">
+            Default declarations of a browser (user-agent styles)
+          </li>
+          <li class="theory__list-item">
+            <span class="yellow">External</span> stylesheets (external
+            files.css)
+          </li>
+          <li class="theory__list-item">
+            <span class="yellow">Internal</span> styles (within the
+            &lt;style&gt; element)
+          </li>
+          <li class="theory__list-item">
+            <span class="yellow">Inline</span> styles (within the &lt;element
+            style="..."&gt; attribute)
+          </li>
+        </ul>
+        <a href="./inline-styling.html"> See an example </a>
+      </div>
+
+      <div class="theory__element">
+        <p class="theory__heading">
+          3. Selector
+          <a
+            href="https://polypane.app/css-specificity-calculator/"
+            target="_blank"
+            >specificity:</a
+          >
+        </p>
+        <ul class="theory__list">
+          <li class="theory__list-item">
+            The number of <span class="yellow">ID</span> selectors in the
+            selector.
+          </li>
+          <li class="theory__list-item">
+            The number of <span class="yellow">class</span> selectors in the
+            selector.
+          </li>
+          <li class="theory__list-item">
+            The number of <span class="yellow">tag</span> and pseudo-element
+            selectors in the selector.
+          </li>
+          <li class="theory__list-item theory__list-item--italic">
+            …more specific selectors
+          </li>
+          <li class="theory__list-item">
+            The <span class="yellow">!important</span> value set on the style
+            declarations.
+          </li>
+        </ul>
+      </div>
+
+      <div class="theory__element">
+        <p class="theory__heading">4. The order in which styles are defined:</p>
+        <ul class="theory__list">
+          <li class="theory__list-item">
+            Styles are applied in the order they are defined.
+          </li>
+          <li class="theory__list-item">
+            Styles defined <span class="yellow">later</span> in the document can
+            override styles defined earlier.
+          </li>
+          <li class="theory__list-item">
+            This is known as the <span class="yellow">"last rule"</span> and is
+            an important aspect of the CSS cascade.
+          </li>
+        </ul>
+      </div>
+
+      <div class="theory__element">
+        <p class="theory__heading">
+          5. <span class="yellow">!important</span> side effects:
+        </p>
+        <ul class="theory__list">
+          <li class="theory__list-item">
+            Overrides the specificity of other selectors
+          </li>
+          <li class="theory__list-item">Can make debugging harder</li>
+          <li class="theory__list-item">Can make maintenance harder</li>
+          <li class="theory__list-item">Can create a false sense of urgency</li>
+        </ul>
+      </div>
+
+      <div class="theory__element">
+        <p class="theory__heading">6. KISS and DRY code</p>
+        <ul class="theory__list">
+          <li class="theory__list-item">
+            Never write styles without knowing why they are written. Check each
+            line of code in the inspector to make sure it is necessary.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

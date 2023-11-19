@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 1</title>
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <!-- <link rel="stylesheet" href="./homework1.css" /> -->
+    <style>
+      .trophy {
+        position: absolute;
+        top: 100px;
+        width: 200px;
+        display: flex;
+        background: var(--sbne-color-success);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        rotate: -25deg;
+        color: var(--sbne-black);
+        right: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="nav">
+      <a href="/">home</a>
+      <a href="/inline-styling.html">inline styling</a>
+      <!-- 
+<a href="/class-naming.html">class naming</a>
+-->
+      <a href="/display-inline-block.html">display: inline / block</a>
+      <a href="/display-flex.html">flexbox</a>
+      <a class="current" href="./homework1.html">homework 1</a>
+      <a href="/quizes/quiz-1.html">quiz 1</a>
+    </nav>
+    <div class="wrapper">
+      <div class="card">
+        <img
+          src="https://source.unsplash.com/300x300/?vegetable&green"
+          alt=""
+        />
+
+        <h4 class="card__title">Card title 1</h4>
+        <p class="card__description">
+          Example text to build on the card title and make up the bulk of the
+          card's content
+        </p>
+        <button class="card__button card__button--secondary">Vegetables</button>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/300x300/?fruit&green" alt="" />
+
+        <h4 class="card__title">Card title 2</h4>
+        <p class="card__description">
+          Example text to build on the card title and make up the bulk of the
+          card's content
+        </p>
+        <button class="card__button card__button--primary">Fruit</button>
+      </div>
+    </div>
+    <h2 class="trophy">
+      Trophy for the&nbsp;absence of&nbsp;a&nbsp;vertical scrollbar!
+    </h2>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple but not Easy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+      .alert {
+        background-color: var(--sbne-color-alert);
+        color: var(--sbnt-color-accent);
+        font-size: 32px;
+        padding: 0.25rem 1.5rem;
+      }
+
+      button {
+        display: block;
+        margin: 2rem auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="nav">
+      <a href="/">home</a>
+      <a class="current" href="/inline-styling.html">inline styling</a>
+      <!-- 
+<a href="/class-naming.html">class naming</a>
+-->
+      <a href="/display-inline-block.html">display: inline / block</a>
+      <a href="/display-flex.html">flexbox</a>
+      <a href="/homeworks/homework1.html">homework 1</a>
+      <a href="/quizes/quiz-1.html">quiz 1</a>
+    </nav>
+    <h1>AN EXAMPLE OF <span class="yellow">INLINE STYLING</span>:</h1>
+    <div class="showcase">
+      <p>There is a 3rd party module installed:</p>
+      <span class="example alert" id="lockedUser">locked USER</span>
+      <button onclick="addColor('alert')">Lock this User</button>
+    </div>
+  </body>
+
+  <script>
+    function addColor(el) {
+      const par = document.getElementsByClassName(el)[0];
+      if (par) {
+        const root = document.documentElement;
+        const alertColor =
+          getComputedStyle(root).getPropertyValue("--sbne-color-alert");
+        if (root && alertColor) {
+          par.style.color =
+            par.style.color !== "var(--sbne-color-alert)"
+              ? "var(--sbne-color-alert)"
+              : "";
+        }
+      }
+    }
+  </script>
+</html>

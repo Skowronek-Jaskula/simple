@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+@import "./reset.css";
+
+:root {
+  --sbne-light-gray: #f2f2f3;
+  --sbne-mid-gray: #c8cdd0;
+  --sbne-dark-gray: #415058;
+  --sbne-black: #1f292e;
+  --sbne-white: #eff2f7;
+
+  --sbne-color-main: #2249a4;
+  --sbne-color-highlight: #a4bdf5;
+
+  --sbnt-color-accent: #fffb7f;
+  --sbne-color-success: #a7dd3c;
+  --sbne-color-alert: #c83619;
+}
+h1 {
+  margin: 2rem 1rem 3rem;
+  font-size: 2rem;
+}
+.theory {
+  padding-inline: 1rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.theory__element {
+  background-color: var(--sbne-light-gray);
+  flex: 1 1 30%;
+  padding: 1.5rem 2rem;
+}
+
+.theory__heading {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.theory__list {
+  margin-bottom: 1rem;
+}
+.theory__list-item {
+  line-height: 1.5;
+}
+.theory__list-item--italic {
+  font-style: italic;
+}
+
+.theory__element--full-width {
+  flex-basis: 100%;
+}
+
+.theory__element--full-width .theory__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.theory a {
+  color: var(--sbne-color-main);
+}
+
+.nav {
+  background-color: var(--sbne-black);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 4rem;
+  width: 100%;
+  top: 0;
+  position: sticky;
+}
+nav a {
+  text-transform: uppercase;
+  color: var(--sbne-white);
+  font-size: 1.25rem;
+  font-family: "Barlow Condensed", sans-serif;
+  text-decoration: none;
+  text-decoration-thickness: from-font;
+  text-decoration-color: currentColor;
+}
+nav a.current {
+  text-decoration-line: underline;
+  color: var(--sbne-color-highlight);
+  cursor: context-menu;
+}
+nav a:hover {
+  text-decoration-line: underline;
+  text-decoration-color: var(--sbne-color-highlight);
+}
+nav a:focus {
+  color: var(--sbne-color-highlight);
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+}
+
+.yellow {
+  background-color: var(--sbnt-color-accent);
+  padding-inline: 0.25em;
+}
+pre {
+  font-family: monospace;
+  color: var(--sbne-black);
+  background-color: var(--sbne-light-gray);
+  padding: 3rem 0 1rem;
+}
+.pre-title {
+  font-size: 0.875rem;
+  background-color: var(--sbne-dark-gray);
+  margin-bottom: 0;
+  color: var(--sbne-white);
+  padding: 0.25rem 0.75rem;
+}
+
+.pre-title + pre {
+  margin-top: -1.5rem;
+  margin-bottom: 2rem;
+}
+
+.showcase {
+  margin-inline: 1rem;
+  background-color: var(--sbne-light-gray);
+  padding: 1.5rem 1rem 2rem;
+  text-align: center;
+}
