@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple but not Easy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+      header {
+        background-color: var(--sbne-color-main);
+        color: var(--sbne-white);
+        padding: 1rem;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 1rem;
+      }
+      aside {
+        outline: solid thin var(--sbne-color-main);
+        outline-offset: -1px;
+      }
+
+      footer {
+        background-color: var(--sbne-mid-gray);
+        padding: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="nav">
+      <a href="/">home</a>
+      <a href="/inline-styling.html">inline styling</a>
+      <!-- 
+<a href="/class-naming.html">class naming</a>
+-->
+      <a href="/display-inline-block.html">display: inline / block</a>
+      <a href="/display-flex.html">flexbox</a>
+      <a class="current" href="/position.html">position</a>
+      <a href="/homeworks/homework1.html">homework 1</a>
+      <a href="/quizes/quiz-1.html">quiz 1</a>
+      <a href="/quizes/quiz-2.html">QUIZ 2</a>
+      <!--<a href="/quizes/quiz-3.html">QUIZ 3</a>-->
+    </nav>
+    <h1>Position: static, relative, absolute, fixed, sticky</h1>
+
+    <section class="showcase">
+      <header>HEADER</header>
+
+      <main>
+        <div>
+          <article>
+            <h2>1st article title</h2>
+            <p>
+              Incididunt anim velit enim cupidatat proident ut amet aliquip enim
+              culpa. Aliquip Lorem minim consectetur eiusmod qui in id ullamco
+              magna magna dolore ut irure. Laborum ad ea deserunt laborum ad
+              excepteur magna. Qui veniam dolore reprehenderit elit ullamco
+              irure elit ut sunt ullamco anim labore irure. Consectetur culpa
+              ullamco veniam amet culpa. Commodo qui amet occaecat laboris ex
+              duis irure.
+            </p>
+            <p>
+              Sit ex aliquip non officia incididunt nisi deserunt consectetur
+              est. Aliqua quis mollit velit esse dolor sint et laborum. Ad
+              veniam ipsum tempor esse ut do laboris. Mollit non excepteur
+              labore magna quis commodo aliquip excepteur ullamco eiusmod nulla
+              laborum magna. Commodo incididunt tempor dolor aliquip. Sint culpa
+              veniam Lorem ea.
+            </p>
+            <p>
+              Mollit incididunt amet fugiat eiusmod amet mollit dolor amet magna
+              ad sint enim exercitation. Veniam sunt et proident eiusmod ut est
+              minim adipisicing consequat. Sit exercitation pariatur deserunt
+              quis pariatur excepteur officia ea et dolore. Id ipsum excepteur
+              do velit sunt do qui minim sint. Tempor officia dolor incididunt
+              pariatur consequat occaecat tempor qui deserunt in.
+            </p>
+            <p>
+              Ea incididunt dolor in culpa eiusmod est qui voluptate. Aliquip
+              velit sit labore tempor nisi aliqua ad officia mollit do. Eu magna
+              magna culpa sint laborum quis officia ipsum. Culpa nostrud non
+              dolore exercitation adipisicing sit minim.
+            </p>
+            <p>
+              Fugiat excepteur adipisicing non dolore tempor fugiat eu tempor
+              incididunt mollit. Consequat enim pariatur ut amet est culpa
+              consequat occaecat fugiat do. Elit do et id ut minim mollit est
+              commodo occaecat occaecat dolore enim aute sunt. Cillum amet amet
+              reprehenderit occaecat duis. Elit voluptate ipsum irure velit
+              occaecat in consequat consequat fugiat.
+            </p>
+            <p>
+              Culpa occaecat reprehenderit do tempor. Nisi laborum duis nulla
+              velit amet. Voluptate et proident est fugiat ex. Esse nulla id do
+              incididunt eu ea enim. Deserunt veniam incididunt est deserunt
+              excepteur esse magna laboris esse nulla magna consectetur do.
+              Deserunt officia consectetur culpa id dolor minim ipsum laboris
+              fugiat incididunt dolor sunt ea sit.
+            </p>
+          </article>
+
+          <article>
+            <h2>2nd article title</h2>
+            <p>
+              Sit ex aliquip non officia incididunt nisi deserunt consectetur
+              est. Aliqua quis mollit velit esse dolor sint et laborum. Ad
+              veniam ipsum tempor esse ut do laboris. Mollit non excepteur
+              labore magna quis commodo aliquip excepteur ullamco eiusmod nulla
+              laborum magna. Commodo incididunt tempor dolor aliquip. Sint culpa
+              veniam Lorem ea.
+            </p>
+            <p>
+              Incididunt anim velit enim cupidatat proident ut amet aliquip enim
+              culpa. Aliquip Lorem minim consectetur eiusmod qui in id ullamco
+              magna magna dolore ut irure. Laborum ad ea deserunt laborum ad
+              excepteur magna. Qui veniam dolore reprehenderit elit ullamco
+              irure elit ut sunt ullamco anim labore irure. Consectetur culpa
+              ullamco veniam amet culpa. Commodo qui amet occaecat laboris ex
+              duis irure.
+            </p>
+            <p>
+              Mollit incididunt amet fugiat eiusmod amet mollit dolor amet magna
+              ad sint enim exercitation. Veniam sunt et proident eiusmod ut est
+              minim adipisicing consequat. Sit exercitation pariatur deserunt
+              quis pariatur excepteur officia ea et dolore. Id ipsum excepteur
+              do velit sunt do qui minim sint. Tempor officia dolor incididunt
+              pariatur consequat occaecat tempor qui deserunt in.
+            </p>
+            <p>
+              Ea incididunt dolor in culpa eiusmod est qui voluptate. Aliquip
+              velit sit labore tempor nisi aliqua ad officia mollit do. Eu magna
+              magna culpa sint laborum quis officia ipsum. Culpa nostrud non
+              dolore exercitation adipisicing sit minim.
+            </p>
+            <p>
+              Fugiat excepteur adipisicing non dolore tempor fugiat eu tempor
+              incididunt mollit. Consequat enim pariatur ut amet est culpa
+              consequat occaecat fugiat do. Elit do et id ut minim mollit est
+              commodo occaecat occaecat dolore enim aute sunt. Cillum amet amet
+              reprehenderit occaecat duis. Elit voluptate ipsum irure velit
+              occaecat in consequat consequat fugiat.
+            </p>
+            <p>
+              Culpa occaecat reprehenderit do tempor. Nisi laborum duis nulla
+              velit amet. Voluptate et proident est fugiat ex. Esse nulla id do
+              incididunt eu ea enim. Deserunt veniam incididunt est deserunt
+              excepteur esse magna laboris esse nulla magna consectetur do.
+              Deserunt officia consectetur culpa id dolor minim ipsum laboris
+              fugiat incididunt dolor sunt ea sit.
+            </p>
+          </article>
+
+          <article>
+            <h2>2nd article title</h2>
+            <p>
+              Incididunt anim velit enim cupidatat proident ut amet aliquip enim
+              culpa. Aliquip Lorem minim consectetur eiusmod qui in id ullamco
+              magna magna dolore ut irure. Laborum ad ea deserunt laborum ad
+              excepteur magna. Qui veniam dolore reprehenderit elit ullamco
+              irure elit ut sunt ullamco anim labore irure. Consectetur culpa
+              ullamco veniam amet culpa. Commodo qui amet occaecat laboris ex
+              duis irure.
+            </p>
+            <p>
+              Sit ex aliquip non officia incididunt nisi deserunt consectetur
+              est. Aliqua quis mollit velit esse dolor sint et laborum. Ad
+              veniam ipsum tempor esse ut do laboris. Mollit non excepteur
+              labore magna quis commodo aliquip excepteur ullamco eiusmod nulla
+              laborum magna. Commodo incididunt tempor dolor aliquip. Sint culpa
+              veniam Lorem ea.
+            </p>
+            <p>
+              Mollit incididunt amet fugiat eiusmod amet mollit dolor amet magna
+              ad sint enim exercitation. Veniam sunt et proident eiusmod ut est
+              minim adipisicing consequat. Sit exercitation pariatur deserunt
+              quis pariatur excepteur officia ea et dolore. Id ipsum excepteur
+              do velit sunt do qui minim sint. Tempor officia dolor incididunt
+              pariatur consequat occaecat tempor qui deserunt in.
+            </p>
+            <p>
+              Ea incididunt dolor in culpa eiusmod est qui voluptate. Aliquip
+              velit sit labore tempor nisi aliqua ad officia mollit do. Eu magna
+              magna culpa sint laborum quis officia ipsum. Culpa nostrud non
+              dolore exercitation adipisicing sit minim.
+            </p>
+            <p>
+              Fugiat excepteur adipisicing non dolore tempor fugiat eu tempor
+              incididunt mollit. Consequat enim pariatur ut amet est culpa
+              consequat occaecat fugiat do. Elit do et id ut minim mollit est
+              commodo occaecat occaecat dolore enim aute sunt. Cillum amet amet
+              reprehenderit occaecat duis. Elit voluptate ipsum irure velit
+              occaecat in consequat consequat fugiat.
+            </p>
+            <p>
+              Culpa occaecat reprehenderit do tempor. Nisi laborum duis nulla
+              velit amet. Voluptate et proident est fugiat ex. Esse nulla id do
+              incididunt eu ea enim. Deserunt veniam incididunt est deserunt
+              excepteur esse magna laboris esse nulla magna consectetur do.
+              Deserunt officia consectetur culpa id dolor minim ipsum laboris
+              fugiat incididunt dolor sunt ea sit.
+            </p>
+          </article>
+        </div>
+
+        <aside>SIDEBAR</aside>
+      </main>
+      <footer>
+        <h4>Footer</h4>
+      </footer>
+    </section>
+  </body>
+</html>

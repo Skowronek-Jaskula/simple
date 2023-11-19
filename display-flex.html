@@ -9,19 +9,28 @@
     <link rel="stylesheet" href="/css/styles.css" />
 
     <style>
+      h1 {
+        margin: 0;
+      }
+
       .flex-wrapper {
         padding: 3rem 2rem;
         position: relative;
         margin-bottom: 200px;
       }
+
       .flex {
         display: flex;
-        gap: 1rem 2rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        /* gap: 1rem 2rem; */
         outline: 1px solid var(--sbne-dark-gray);
       }
 
       .flex__item {
         background: var(--sbne-light-gray);
+        flex-grow: 0;
       }
 
       .flex:before,
@@ -62,6 +71,7 @@
         padding: 2px 13px;
         bottom: 0;
       }
+
       .flex-wrapper:after {
         box-shadow: 0 0 0 8px white;
         background-image: linear-gradient(
@@ -129,6 +139,9 @@
         top: 50%;
         content: "main axis";
       }
+      h1 {
+        margin: 0;
+      }
     </style>
   </head>
 
@@ -141,15 +154,61 @@
 -->
       <a href="/display-inline-block.html">display: inline / block</a>
       <a class="current" href="/display-flex.html">flexbox</a>
+      <a href="/position.html">position</a>
       <a href="/homeworks/homework1.html">homework 1</a>
       <a href="/quizes/quiz-1.html">quiz 1</a>
       <a href="/quizes/quiz-2.html">QUIZ 2</a>
-      <!--<a href="/quizes/quiz-3.html">QUIZ 3</a>-->
+      <a href="/quizes/quiz-3.html">QUIZ 3</a>
     </nav>
     <h1>DISPLAY: FLEX</h1>
 
     <div class="flex-wrapper">
       <div class="flex">
+        <h2 class="flex__item">flex element one</h2>
+        <p class="flex__item">
+          flex element two flex element two flex element two
+        </p>
+        <h3 class="flex__item">
+          flex element three flex element three flex element three
+        </h3>
+        <p class="flex__item">flex element 4 flex element 4</p>
+        <p class="flex__item">flex element 5</p>
+        <h2 class="flex__item">flex element one</h2>
+        <p class="flex__item">
+          flex element two flex element two flex element two
+        </p>
+        <h3 class="flex__item">
+          flex element three flex element three flex element three
+        </h3>
+        <p class="flex__item">flex element 4 flex element 4</p>
+        <p class="flex__item">flex element 5</p>
+        <h2 class="flex__item">flex element one</h2>
+        <p class="flex__item">
+          flex element two flex element two flex element two
+        </p>
+        <h3 class="flex__item">
+          flex element three flex element three flex element three
+        </h3>
+        <p class="flex__item">flex element 4 flex element 4</p>
+        <p class="flex__item">flex element 5</p>
+        <h1 class="flex__item">flex element one</h1>
+        <p class="flex__item">
+          flex element two flex element two flex element two
+        </p>
+        <h3 class="flex__item">
+          flex element three flex element three flex element three
+        </h3>
+        <p class="flex__item">flex element 4 flex element 4</p>
+        <p class="flex__item">flex element 5</p>
+        <h1 class="flex__item">flex element one</h1>
+        <p class="flex__item">
+          flex element two flex element two flex element two
+        </p>
+        <h3 class="flex__item">
+          flex element three flex element three flex element three
+        </h3>
+        <p class="flex__item">flex element 4 flex element 4</p>
+        <p class="flex__item">flex element 5</p>
         <h1 class="flex__item">flex element one</h1>
         <p class="flex__item">
           flex element two flex element two flex element two
