@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUIZ 2</title>
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="../css/helpers/grid.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <style>
+      body {
+        background-color: var(--sbne-mid-gray);
+      }
+      h1 {
+        margin-left: 0;
+      }
+      .hr {
+        margin-block: 7rem 9rem;
+      }
+      img {
+        margin-bottom: 2rem;
+        display: block;
+        margin: auto;
+      }
+      form {
+        line-height: 1.5;
+      }
+      form div {
+        margin-bottom: 10px;
+      }
+      label {
+        padding: 0.25rem;
+      }
+      .label-pre {
+        position: relative;
+      }
+      .label-pre:after {
+        position: absolute;
+        bottom: 0;
+        left: -30px;
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: var(--sbne-white);
+        background-size: contain;
+        border-radius: 50%;
+        content: "";
+      }
+      .col-4 input {
+        display: none;
+      }
+      [class*="col"]:not(.col-4) input:checked + label {
+        background-color: var(--sbne-mid-gray);
+      }
+      [class*="col"]:not(.col-4) input[data-value="correct"]:checked + label {
+        background-color: var(--sbne-color-success);
+      }
+      [class*="col"]:not(.col-4) input[data-value="incorrect"]:checked + label {
+        background-color: var(--sbne-color-alert);
+        color: var(--sbne-white);
+      }
+      input[data-value="correct"]:checked + .label-pre::after {
+        background-image: url(../assets/icons/smile.svg);
+      }
+      input[data-value="incorrect"]:checked + .label-pre::after {
+        background-image: url(../assets/icons/sad.svg);
+      }
+      pre {
+        display: inline-block;
+        padding: 10px 60px 10px 40px;
+        background-color: #333;
+        color: var(--sbnt-color-accent);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/">home</a>
+      <a href="/inline-styling.html">inline styling</a>
+      <!-- 
+<a href="/class-naming.html">class naming</a>
+-->
+      <a href="/display-inline-block.html">display: inline / block</a>
+      <a href="/display-flex.html">flexbox</a>
+      <a href="/position.html">position</a>
+      <a href="/homeworks/homework1.html">homework 1</a>
+      <a href="/homeworks/homework2.html">homework 2</a>
+      <a href="/quizes/quiz-1.html">quiz 1</a>
+      <a class="current" href="/quizes/quiz-2.html">quiz 2</a>
+      <!--<a href="/quizes/quiz-3.html">QUIZ 3</a>-->
+    </nav>
+    <section class="container">
+      <div class="row">
+        <div class="col">
+          <h1>QUIZ 2</h1>
+        </div>
+      </div>
+      <form>
+        <div class="row mt-5">
+          <h3 class="col">Flexbox: 1</h3>
+          <div class="col-12">
+            <img src="./flex-1.jpg" alt="" />
+          </div>
+          <div class="col-4">
+            <input type="radio" name="flex1" id="flex12" />
+            <label for="flex12" class="label-pre">
+              <pre>
+.list {
+  display: flex;
+  gap: 1rem 2rem;
+}
+
+.list__item {
+  flex-direction: row;
+  flex-wrap: wrap;
+}</pre
+              >
+            </label>
+          </div>
+          <div class="col-4">
+            <input type="radio" name="flex1" id="flex13" />
+            <label for="flex13" class="label-pre">
+              <pre>
+.list {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem 2rem;
+}
+
+.list__item {
+  justify-content: wrap;
+}</pre
+              >
+            </label>
+          </div>
+          <div class="col-4">
+            <input type="radio" name="flex1" id="flex11" />
+            <label for="flex11" class="label-pre">
+              <pre>
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+
+.list__item {
+}</pre
+              >
+            </label>
+          </div>
+        </div>
+
+        <hr class="hr" />
+
+        <div class="row">
+          <h3 class="col">Flexbox: 2</h3>
+          <div class="col-12">
+            <img src="./flex-2.jpg" alt="" />
+          </div>
+
+          <div class="col-4">
+            <input type="radio" name="flex2" id="flex21" />
+            <label for="flex21" class="label-pre">
+              <pre>
+.list {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem 2rem;
+}
+
+.list__item {
+  flex-shrink: 1;
+  }</pre
+              >
+            </label>
+          </div>
+          <div class="col-4">
+            <input type="radio" name="flex2" id="flex22" />
+            <label for="flex22" class="label-pre">
+              <pre>
+  .list {
+    align-items: center;
+    display: flex;
+    gap: 1rem 2rem;
+    flex-direction: row;
+    flex-shrink: 1;
+  }
+
+  .list__item {
+  }</pre
+              >
+            </label>
+          </div>
+          <div class="col-4">
+            <input type="radio" name="flex2" id="flex23" />
+            <label for="flex23" class="label-pre">
+              <pre>
+  .list {
+    display: flex;
+    gap: 1rem 2rem;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+  }
+    
+  .list__item {
+  }</pre
+              >
+            </label>
+          </div>
+        </div>
+
+        <hr class="hr" />
+
+        <div class="row">
+          <h3 class="col">Flexbox: 3</h3>
+          <div class="col-12">
+            <img src="./flex-3.jpg" alt="" />
+          </div>
+
+          <div class="col-4">
+            <input type="radio" name="flex3" id="flex31" />
+            <label for="flex31" class="label-pre">
+              <pre>
+.list {
+  display: flex;
+  gap: 1rem 2rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.list__item {
+  flex-shrink: 0;
+  flex-basis: 1;
+  flex-grow: 1;
+}</pre
+              >
+            </label>
+          </div>
+          <div class="col-4">
+            <input type="radio" name="flex3" id="flex32" />
+            <label for="flex32" class="label-pre">
+              <pre>
+  .list {
+    display: flex;
+    gap: 1rem 2rem;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  .list__item {
+    flex-shrink: 0;
+    flex-basis: 0;
+    flex-grow: 1;
+  }</pre
+              >
+            </label>
+          </div>
+          <div class="col-4">
+            <input type="radio" name="flex3" id="flex33" />
+            <label for="flex33" class="label-pre">
+              <pre>
+  .list {
+    display: flex;
+    gap: 1rem 2rem;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  .list__item {
+    flex-shrink: 1;
+    flex-basis: 1;
+    flex-grow: 1;
+  }</pre
+              >
+            </label>
+          </div>
+        </div>
+
+        <hr class="hr" />
+
+        <div class="row">
+          <h3 class="col">Flexbox: 4</h3>
+          <div class="col-12">
+            <img src="./flex-4.jpg" alt="" />
+          </div>
+
+          <h4 class="col-12">What about flex-wrap here?</h4>
+          <div class="col-8">
+            <input type="radio" name="flex4" id="flex41" />
+            <label class="label" for="flex41">
+              It has not been added to flex-items
+            </label>
+          </div>
+          <div class="col-8">
+            <input type="radio" name="flex4" id="flex42" />
+            <label class="label" for="flex42">
+              It has not been added to flex-container</label
+            >
+          </div>
+          <div class="col-8">
+            <input type="radio" name="flex4" id="flex43" />
+            <label class="label" for="flex43">
+              Maybe it was added, but flex-shrink is 0, and the result is not
+              visible
+            </label>
+          </div>
+        </div>
+
+        <hr class="hr" />
+
+        <div class="row">
+          <h2 class="col-12">Flexbox: 5</h2>
+
+          <div class="col-8">
+            <h4>5. What does the value flex-direction: row mean?</h4>
+            <div>
+              <input type="radio" name="row" id="row1" />
+              <label class="label" for="row1"
+                >Flex items are laid out in a single row (from left to
+                right).</label
+              >
+            </div>
+
+            <div>
+              <input type="radio" name="row" id="row2" />
+              <label class="label" for="row2"
+                >Flex items are laid out in a single column (from top to
+                bottom).</label
+              >
+            </div>
+
+            <div>
+              <input type="radio" name="row" id="row3" />
+              <label class="label" for="row3"
+                >Flex items are laid out in a single row (from right to
+                left).</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <hr class="hr" />
+
+        <div class="row">
+          <h2 class="col-12">Flexbox: 6</h2>
+
+          <div class="col-8">
+            <h4>6. What is justify-content?</h4>
+            <div>
+              <input type="radio" name="justify" id="justify1" />
+              <label class="label" for="justify1"
+                >Utilize justify-content: center; on the flex container to
+                centrally align flex items along the main axis, creating a
+                balanced layout</label
+              >
+            </div>
+            <div>
+              <input type="radio" name="justify" id="justify2" />
+              <label class="label" for="justify2"
+                >Apply justify-content: space-between; on the flex container to
+                evenly distribute flex items along the main axis, leaving space
+                at both ends</label
+              >
+            </div>
+
+            <div>
+              <input type="radio" name="justify" id="justify3" />
+              <label class="label" for="justify3"
+                >Set justify-content: flex-end; for flex items to align them at
+                the end of the main axis within the flex container</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <hr class="hr" />
+
+        <div class="row">
+          <div class="col-8">
+            <h4>
+              7. Which of the following elements are typically displayed as
+              block-level elements by default?
+            </h4>
+            <div>
+              <input type="checkbox" name="blockEls" id="block1Els" />
+              <label class="label" for="block1Els">&lt;div&gt;</label>
+            </div>
+
+            <div>
+              <input type="checkbox" name="blockEls" id="block2Els" />
+              <label class="label" for="block2Els">&lt;span&gt;</label>
+            </div>
+
+            <div>
+              <input type="checkbox" name="blockEls" id="block3Els" />
+              <label class="label" for="block3Els">&lt;p&gt;</label>
+            </div>
+
+            <div>
+              <input type="checkbox" name="blockEls" id="block4Els" />
+              <label class="label" for="block4Els">&lt;a href&gt;</label>
+            </div>
+          </div>
+        </div>
+
+        <hr class="hr" />
+      </form>
+    </section>
+  </body>
+</html>
