@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUIZ 3</title>
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="../css/helpers/grid.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <style>
+      body {
+        background-color: var(--sbne-mid-gray);
+      }
+      h1 {
+        margin-left: 0;
+      }
+      .hr {
+        margin-block: 7rem 9rem;
+      }
+      img {
+        margin-bottom: 2rem;
+        display: block;
+        margin: auto;
+      }
+      form {
+        line-height: 1.5;
+      }
+      form div {
+        margin-bottom: 10px;
+      }
+      label {
+        padding: 0.25rem;
+      }
+      .label-pre {
+        position: relative;
+      }
+      .label-pre:after {
+        position: absolute;
+        bottom: 0;
+        left: -30px;
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: var(--sbne-white);
+        background-size: contain;
+        border-radius: 50%;
+        content: "";
+      }
+      .col-4 input {
+        display: none;
+      }
+      [class*="col"]:not(.col-4) input:checked + label {
+        background-color: var(--sbne-mid-gray);
+      }
+      [class*="col"]:not(.col-4) input[data-value="correct"]:checked + label {
+        background-color: var(--sbne-color-success);
+      }
+      [class*="col"]:not(.col-4) input[data-value="incorrect"]:checked + label {
+        background-color: var(--sbne-color-alert);
+        color: var(--sbne-white);
+      }
+      input[data-value="correct"]:checked + .label-pre::after {
+        background-image: url(../assets/icons/smile.svg);
+      }
+      input[data-value="incorrect"]:checked + .label-pre::after {
+        background-image: url(../assets/icons/sad.svg);
+      }
+      pre {
+        display: inline-block;
+        padding: 10px 60px 10px 40px;
+        background-color: #333;
+        color: var(--sbnt-color-accent);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/">home</a>
+      <a href="/inline-styling.html">inline styling</a>
+      <!-- 
+<a href="/class-naming.html">class naming</a>
+-->
+      <a href="/display-inline-block.html">display: inline / block</a>
+      <a href="/display-flex.html">flexbox</a>
+      <a href="/position.html">position</a>
+      <a href="/homeworks/homework1.html">homework 1</a>
+      <a href="/quizes/quiz-1.html">quiz 1</a>
+      <a href="/quizes/quiz-2.html">QUIZ 2</a>
+      <a class="current" href="/quizes/quiz-3.html">quiz 3</a>
+    </nav>
+    <section class="container">
+      <div class="row">
+        <div class="col">
+          <h1>QUIZ 3</h1>
+        </div>
+      </div>
+      <form>
+        <div class="row mt-5">
+          <div class="col-8">
+            <h4>
+              1. What is the purpose of variables in Sass (Syntactically Awesome
+              Style Sheets)?
+            </h4>
+            <div>
+              <input
+                type="checkbox"
+                name="purpose"
+                data-value="correct"
+                id="purpose1"
+              />
+              <label for="purpose1">
+                They allow storing values and reusing them in different parts of
+                the code.
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="purpose"
+                data-value="incorrect"
+                id="purpose2"
+              />
+              <label for="purpose2">
+                They enable nesting selectors inside variable declarations.
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="purpose"
+                id="purpose3"
+                data-value="incorrect"
+              />
+              <label for="purpose3">
+                They facilitate the compilation of Sass to CSS.
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+          <div class="col-8">
+            <h4>
+              2. How does the namespaced @use module system facilitate the usage
+              of modules?
+            </h4>
+            <div>
+              <input
+                type="checkbox"
+                name="namespaced"
+                data-value="correct"
+                id="namespaced1"
+              />
+              <label for="namespaced1">
+                It allows importing and using modules from other Sass files
+                while maintaining their namespace scope.
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="namespaced"
+                data-value="correct"
+                id="namespaced2"
+              />
+              <label for="namespaced2">
+                This helps avoid naming conflicts between different modules.
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="namespaced"
+                id="namespaced3"
+                data-value="correct"
+              />
+              <label for="namespaced3">
+                It enables better code organization and responsibility
+                separation.
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+          <div class="col-8">
+            <h4>
+              3. How does nesting selectors in SCSS (Sassy CSS) affect the code
+              structure?
+            </h4>
+            <div>
+              <input
+                type="checkbox"
+                name="nesting"
+                data-value="correct"
+                id="nesting1"
+              />
+              <label for="nesting1">
+                a) It makes it easier to create a more readable and organized
+                hierarchy of selectors.
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="nesting"
+                data-value="sometimes"
+                id="nesting2"
+              />
+              <label for="nesting2">
+                b) It allows avoiding repetition of class names in the code.
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="nesting"
+                id="nesting3"
+                data-value="correct"
+              />
+              <label for="nesting3">
+                c) It supports creating more modular styles by nesting selectors
+                inside other selectors.
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+          <div class="col-8">
+            <h4>4. What are the benefits of compiling SCSS to CSS?</h4>
+            <div>
+              <input
+                type="checkbox"
+                name="benefits"
+                data-value="correct"
+                id="benefits1"
+              />
+              <label for="benefits1">
+                a) It enables the use of advanced Sass features that are not
+                supported by browsers.
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="benefits"
+                data-value="incorrect"
+                id="benefits2"
+              />
+              <label for="benefits2">
+                b) Compiling SCSS to CSS increases the specificity of selectors,
+                allowing for more precise targeting of elements within the
+                document.
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="benefits"
+                id="benefits3"
+                data-value="sometimes"
+              />
+              <label for="benefits3">
+                c) It provides better performance and code optimization by
+                minimizing and combining different style files.
+              </label>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <div class="row">
+          <div class="col-8">
+            <h4>
+              5. How does the behavior of elements with position: relative
+              differ from position: absolute?
+            </h4>
+            <div>
+              <input
+                type="checkbox"
+                name="behavior"
+                data-value="correct"
+                id="behavior1"
+              />
+              <label for="behavior1">
+                a) Elements with `position: relative` behave relative to their
+                original position,<br />
+                while elements with `position: absolute` are positioned relative
+                to their closest parent element with non-static position.
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="behavior"
+                data-value="incorrect"
+                id="behavior2"
+              />
+              <label for="behavior2">
+                b) Elements with `position: relative` are moved relative to
+                their closest non-static parent element,
+                <br />
+                while elements with `position: absolute` behave relative to the
+                browser window.
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="behavior"
+                id="behavior3"
+                data-value="incorrect"
+              />
+              <label for="behavior3">
+                c) Elements with position: relative and position: absolute have
+                different behaviors, where elements with position: relative are
+                moved relative to their closest non-static parent element <br />
+                while elements with position: absolute are positioned relative
+                to the browser window.
+              </label>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <div class="row">
+          <div class="col-8">
+            <h4>6. When is the value position: fixed used in CSS?</h4>
+            <div>
+              <input
+                type="checkbox"
+                name="fixed"
+                data-value="correct"
+                id="fixed1"
+              />
+              <label for="fixed1">
+                a) When we want an element to be positioned relative to the
+                browser window and remain fixed even during page scrolling.
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="fixed"
+                data-value="incorrect"
+                id="fixed2"
+              />
+              <label for="fixed2">
+                b) When we want an element to be positioned relative to its
+                parent element, regardless of page scrolling.
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="fixed"
+                id="fixed3"
+                data-value="incorrect"
+              />
+              <label for="fixed3">
+                c) When we want an element to be positioned relative to its
+                parent element and move along with page scrolling.
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+          <div class="col-8">
+            <h4>
+              7. Which of the following statements about CSS variables are true?
+              Select all correct answers.
+            </h4>
+            <div>
+              <input
+                type="checkbox"
+                name="variablesCss"
+                data-value="correct"
+                id="variablesCss1"
+              />
+              <label for="variablesCss1">
+                a) CSS variables can be defined inside selector rules.
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="variablesCss"
+                data-value="correct"
+                id="variablesCss2"
+              />
+              <label for="variablesCss2">
+                b) CSS variables can be nested and inherited by child elements.
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="variablesCss"
+                id="variablesCss3"
+                data-value="correct"
+              />
+              <label for="variablesCss3">
+                c) CSS variables can be dynamically modified using JavaScript.
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="variablesCss"
+                id="variablesCss4"
+                data-value="incorrect"
+              />
+              <label for="variablesCss4">
+                d) CSS variables are always global for the entire document.
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+          <div class="col-6">
+            <h4>
+              8. Which color will be used for the text with the class "text"?
+              Choose the answer that best describes the behavior of CSS
+              variables in this context:
+            </h4>
+            <div>
+              <input
+                type="checkbox"
+                name="variablesCode"
+                data-value="incorrect"
+                id="variablesCode1"
+              />
+              <label for="variablesCode1">a) Red</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="variablesCode"
+                data-value="correct"
+                id="variablesCode2"
+              />
+              <label for="variablesCode2">b) Green</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="variablesCode"
+                id="variablesCode3"
+                data-value="incorrect"
+              />
+              <label for="variablesCode3">
+                c) A different color will be applied because CSS variables are
+                not inherited.
+              </label>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <pre>
+              :root {
+                --primary-color: red;
+              }
+              
+              .container {
+                --primary-color: green;
+              }
+              
+              .text {
+                color: var(--primary-color);
+              }              
+            </pre>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+          <div class="col-6">
+            <h4>9. Do you remember Flexbox?</h4>
+            <div>
+              <input
+                type="checkbox"
+                name="online"
+                data-value="correct"
+                id="online1"
+              />
+              <label for="online1"
+                >a) test yourself in this
+                <a target="_blank" href="http://flexboxfroggy.com/">
+                  online tool
+                </a>
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="online"
+                data-value="correct"
+                id="online2"
+              />
+              <label for="online2"
+                >b) look at the art created
+                <a
+                  target="_blank"
+                  href="https://css-art.com/css-kitchenaid-mixer/"
+                >
+                  here
+                </a>
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="online"
+                id="online3"
+                data-value="correct"
+              />
+              <label for="online3"
+                >c) you can also play a
+                <a target="_blank" href="https://codepen.io/una/pen/NxZaNr">
+                  pure css game
+                </a>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+      </form>
+    </section>
+  </body>
+</html>
