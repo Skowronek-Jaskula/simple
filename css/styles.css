@@ -15,10 +15,12 @@
   --sbne-color-success: #a7dd3c;
   --sbne-color-alert: #c83619;
 }
+
 h1 {
   margin: 2rem 1rem 3rem;
   font-size: 2rem;
 }
+
 .theory {
   padding-inline: 1rem 1rem;
   display: flex;
@@ -40,9 +42,11 @@ h1 {
 .theory__list {
   margin-bottom: 1rem;
 }
+
 .theory__list-item {
   line-height: 1.5;
 }
+
 .theory__list-item--italic {
   font-style: italic;
 }
@@ -70,6 +74,7 @@ h1 {
   top: 0;
   position: sticky;
 }
+
 nav a {
   text-transform: uppercase;
   color: var(--sbne-white);
@@ -79,15 +84,18 @@ nav a {
   text-decoration-thickness: from-font;
   text-decoration-color: currentColor;
 }
+
 nav a.current {
   text-decoration-line: underline;
   color: var(--sbne-color-highlight);
   cursor: context-menu;
 }
+
 nav a:hover {
   text-decoration-line: underline;
   text-decoration-color: var(--sbne-color-highlight);
 }
+
 nav a:focus {
   color: var(--sbne-color-highlight);
   text-decoration-line: underline;
@@ -98,12 +106,14 @@ nav a:focus {
   background-color: var(--sbnt-color-accent);
   padding-inline: 0.25em;
 }
+
 pre {
   font-family: monospace;
   color: var(--sbne-black);
   background-color: var(--sbne-light-gray);
   padding: 3rem 0 1rem;
 }
+
 .pre-title {
   font-size: 0.875rem;
   background-color: var(--sbne-dark-gray);
