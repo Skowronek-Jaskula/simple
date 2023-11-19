@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Simple but not Easy</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link rel="icon" href="/assets/favicon.ico" />
     <link rel="stylesheet" href="/css/styles.css" />
     <style>
@@ -30,30 +30,25 @@
 -->
       <a href="/display-inline-block.html">display: inline / block</a>
       <a href="/display-flex.html">flexbox</a>
+      <a href="/position.html">position</a>
       <a href="/homeworks/homework1.html">homework 1</a>
+      <a href="/homeworks/homework2.html">homework 2</a>
       <a href="/quizes/quiz-1.html">quiz 1</a>
+      <a href="/quizes/quiz-2.html">quiz 2</a>
     </nav>
     <h1>AN EXAMPLE OF <span class="yellow">INLINE STYLING</span>:</h1>
     <div class="showcase">
       <p>There is a 3rd party module installed:</p>
       <span class="example alert" id="lockedUser">locked USER</span>
-      <button onclick="addColor('alert')">Lock this User</button>
+      <button onclick="addColor('lockedUser')">Lock this User</button>
     </div>
   </body>
 
   <script>
     function addColor(el) {
-      const par = document.getElementsByClassName(el)[0];
+      const par = document.getElementById(el);
       if (par) {
-        const root = document.documentElement;
-        const alertColor =
-          getComputedStyle(root).getPropertyValue("--sbne-color-alert");
-        if (root && alertColor) {
-          par.style.color =
-            par.style.color !== "var(--sbne-color-alert)"
-              ? "var(--sbne-color-alert)"
-              : "";
-        }
+        par.style.color = par.style.color !== "red" ? "red" : "";
       }
     }
   </script>
