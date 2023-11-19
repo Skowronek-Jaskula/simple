@@ -9,20 +9,125 @@
     <link rel="stylesheet" href="/css/styles.css" />
 
     <style>
-      .list {
+      .flex-wrapper {
+        padding: 3rem 2rem;
+        position: relative;
+        margin-bottom: 200px;
+      }
+      .flex {
         display: flex;
         gap: 1rem 2rem;
-        outline: 1px solid blueviolet;
-        flex-wrap: wrap;
-        flex-direction: row;
+        outline: 1px solid var(--sbne-dark-gray);
       }
 
-      .list__item {
-        background: pink;
+      .flex__item {
+        background: var(--sbne-light-gray);
       }
 
-      .rules {
-        margin-top: 100px;
+      .flex:before,
+      .flex:after,
+      .flex-wrapper:after {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        justify-content: center;
+        font-family: monospace;
+        text-align: center;
+        color: var(--sbne-color-main);
+      }
+
+      .flex:before {
+        box-shadow: 0 0 0 6px white;
+        background: var(--sbne-color-main);
+        top: 0;
+        bottom: 0;
+        width: 1.25px;
+        left: calc(50% - 90px);
+        content: "";
+      }
+
+      .flex:after {
+        transform: rotate(90deg);
+        left: calc(50% - 142px);
+        content: "cross axis";
+        top: 0;
+        background-image: linear-gradient(
+          0,
+          transparent calc(50% - 10px),
+          white calc(50% - 10px),
+          white calc(50% + 10px),
+          transparent calc(50% + 10px)
+        );
+        z-index: 2;
+        padding: 2px 13px;
+        bottom: 0;
+      }
+      .flex-wrapper:after {
+        box-shadow: 0 0 0 8px white;
+        background-image: linear-gradient(
+          90deg,
+          var(--sbne-color-main) calc(50% - 500px),
+          white calc(50% - 500px),
+          calc(50% - 480px),
+          var(--sbne-color-main) calc(50% - 480px),
+          calc(50% - 420px),
+          white calc(50% - 420px),
+          calc(50% - 400px),
+          var(--sbne-color-main) calc(50% - 400px),
+          calc(50% - 340px),
+          white calc(50% - 340px),
+          calc(50% - 320px),
+          var(--sbne-color-main) calc(50% - 320px),
+          calc(50% - 260px),
+          white calc(50% - 260px),
+          calc(50% - 240px),
+          var(--sbne-color-main) calc(50% - 240px),
+          calc(50% - 190px),
+          white calc(50% - 190px),
+          calc(50% - 170px),
+          var(--sbne-color-main) calc(50% - 170px),
+          calc(50% - 120px),
+          white calc(50% - 120px),
+          calc(50% - 100px),
+          var(--sbne-color-main) calc(50% - 100px),
+          calc(50% - 50px),
+          white calc(50% - 50px),
+          calc(50% + 50px),
+          var(--sbne-color-main) calc(50% + 50px),
+          calc(50% + 100px),
+          white calc(50% + 100px),
+          calc(50% + 120px),
+          var(--sbne-color-main) calc(50% + 120px),
+          calc(50% + 170px),
+          white calc(50% + 170px),
+          calc(50% + 190px),
+          var(--sbne-color-main) calc(50% + 190px),
+          calc(50% + 250px),
+          white calc(50% + 250px),
+          white calc(50% + 270px),
+          var(--sbne-color-main) calc(50% + 270px),
+          var(--sbne-color-main) calc(50% + 330px),
+          white calc(50% + 330px),
+          white calc(50% + 350px),
+          var(--sbne-color-main) calc(50% + 350px),
+          var(--sbne-color-main) calc(50% + 410px),
+          white calc(50% + 410px),
+          white calc(50% + 430px),
+          var(--sbne-color-main) calc(50% + 430px),
+          var(--sbne-color-main) calc(50% + 490px),
+          white calc(50% + 490px),
+          white calc(50% + 520px),
+          var(--sbne-color-main) calc(50% + 520px),
+          var(--sbne-color-main) calc(50% + 590px),
+          white calc(50% + 590px),
+          white calc(50% + 620px),
+          var(--sbne-color-main) calc(50% + 620px)
+        );
+        height: 1px;
+        left: 0;
+        right: 0;
+        top: 50%;
+        content: "main axis";
       }
     </style>
   </head>
@@ -38,30 +143,34 @@
       <a class="current" href="/display-flex.html">flexbox</a>
       <a href="/homeworks/homework1.html">homework 1</a>
       <a href="/quizes/quiz-1.html">quiz 1</a>
+      <a href="/quizes/quiz-2.html">QUIZ 2</a>
+      <!--<a href="/quizes/quiz-3.html">QUIZ 3</a>-->
     </nav>
     <h1>DISPLAY: FLEX</h1>
 
-    <ul class="list">
-      <h1 class="list__item">List element one</h1>
-      <p class="list__item">
-        List element two List element two List element two
-      </p>
-      <h3 class="list__item">
-        List element three List element three List element three
-      </h3>
-      <li class="list__item">List element 4 List element 4</li>
-      <li class="list__item">List element 5</li>
-    </ul>
-
-    <ul class="rules">
-      <li class="list__item">flex-direction</li>
-      <li class="list__item">flex-wrap</li>
-      <li class="list__item">(flex) flex-grow, flex-shrink, flex-basis</li>
-      <li class="list__item">flex-direction</li>
-      <li class="list__item">align-items (cross axis property)</li>
-      <li class="list__item">justify-content (main axis property)</li>
-      <li class="list__item">main axis (just a term)</li>
-      <li class="list__item">cross axis (just a term)</li>
-    </ul>
+    <div class="flex-wrapper">
+      <div class="flex">
+        <h1 class="flex__item">flex element one</h1>
+        <p class="flex__item">
+          flex element two flex element two flex element two
+        </p>
+        <h3 class="flex__item">
+          flex element three flex element three flex element three
+        </h3>
+        <p class="flex__item">flex element 4 flex element 4</p>
+        <p class="flex__item">flex element 5</p>
+      </div>
+    </div>
+    <section class="showcase">
+      <ul class="rules">
+        <li class="list__item">flex-direction</li>
+        <li class="list__item">flex-wrap</li>
+        <li class="list__item">(flex) flex-grow, flex-shrink, flex-basis</li>
+        <li class="list__item">align-items (cross axis property)</li>
+        <li class="list__item">justify-content (main axis property)</li>
+        <li class="list__item">main axis (just a term)</li>
+        <li class="list__item">cross axis (just a term)</li>
+      </ul>
+    </section>
   </body>
 </html>
