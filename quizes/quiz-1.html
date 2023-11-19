@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUIZ DAY 1</title>
+    <link rel="stylesheet" href="../css/helpers/grid.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <style>
+      hr {
+        margin-block: 2rem;
+      }
+      form {
+        line-height: 1.5;
+      }
+      form div {
+        margin-bottom: 0.875rem;
+      }
+      label {
+        padding: 0.25rem;
+      }
+      input:checked + label {
+        background-color: var(--sbne-mid-gray);
+      }
+      input[data-value="correct"]:checked + label {
+        background-color: var(--sbne-color-success);
+      }
+      input[data-value="incorrect"]:checked + label {
+        background-color: var(--sbne-color-alert);
+        color: var(--sbne-white);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/">home</a>
+      <a href="/inline-styling.html">inline styling</a>
+      <!-- 
+<a href="/class-naming.html">class naming</a>
+-->
+      <a href="/display-inline-block.html">display: inline / block</a>
+      <a href="/display-flex.html">flexbox</a>
+      <a href="/homeworks/homework1.html">homework 1</a>
+      <a class="current" href="/quizes/quiz-1.html">quiz 1</a>
+    </nav>
+    <h1>Quiz after Day 1.</h1>
+    <section class="container-fluid">
+      <div class="row">
+        <div class="col-6">
+          <h4>1. How does <span class="yellow"> inheritance </span> work in CSS?</h4>
+          <form>
+            <div>
+              <input type="radio" name="inheritance" id="inheritance1" />
+              <label for="inheritance1"> Styles are inherited only by child elements, so the color is blue. </label>
+            </div>
+            <div>
+              <input type="radio" name="inheritance" id="inheritance2" />
+              <label for="inheritance2">
+                Styles are inherited only by parent elements, therefore, the color is the browser default (black/white -
+                based on the user's color mode).
+              </label>
+            </div>
+            <div>
+              <input type="radio" name="inheritance" id="inheritance3" />
+              <label for="inheritance3">
+                Styles are inherited by child elements and can be overridden, so the color blue, but can be changed by
+                the child styling.
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="col-5">
+          <span class="pre-title">HTML:</span>
+
+          <pre>
+    &lt;div class="parent"&gt;
+      &lt;p class="child"&gt;What is my color?&lt;/p&gt;
+    &lt;/div&gt;            
+          </pre>
+
+          <span class="pre-title">CSS:</span>
+          <pre>
+    .parent {
+       color: blue;
+    }
+          </pre>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-6">
+          <h4>
+            2. Which of the following methods is
+            <span class="yellow">incorrect</span> for defining styles in CSS?
+          </h4>
+
+          <form>
+            <div>
+              <input type="radio" name="methods" id="method1" />
+              <label for="method1">Nesting styles </label>
+            </div>
+            <div>
+              <input type="radio" name="methods" id="method2" />
+              <label for="method2">Inline style </label>
+            </div>
+            <div>
+              <input type="radio" name="methods" id="method3" />
+              <label for="method3">Writing styles in a JavaScript file </label>
+            </div>
+          </form>
+        </div>
+        <div class="col-5">
+          <span class="pre-title">HTML inline styling:</span>
+
+          <pre>
+    &lt;p style="color: red;"&gt;Text&lt;/p&gt;
+          </pre>
+
+          <span class="pre-title">CSS nested styling:</span>
+          <pre>
+    .nested .nested__item {
+       font-size: 14px;
+    }        
+          </pre>
+
+          <span class="pre-title">JS dynamic styling:</span>
+          <pre>
+    document.getElementById("el").style.color = "red"
+          </pre>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-6">
+          <h4>3. What is <span class="yellow">specificity of selectors </span> in CSS?</h4>
+          <form>
+            <div>
+              <input type="radio" name="specificity" id="specificity1" />
+              <label for="specificity1"> It determines how many times a selector is used in the code. </label>
+            </div>
+            <div>
+              <input type="radio" name="specificity" id="specificity2" />
+              <label for="specificity2"> It determines the order in which style declarations are applied. </label>
+            </div>
+            <div>
+              <input type="radio" name="specificity" id="specificity3" />
+              <label for="specificity3"> It determines the priority of a selector when overriding styles. </label>
+            </div>
+          </form>
+        </div>
+        <div class="col-5">
+          <span class="pre-title">HTML:</span>
+
+          <pre>
+    &lt;p id="myId" class="my-class"&gt;What is my color?&lt;/p&gt;
+    </pre
+          >
+          <span class="pre-title">CSS:</span>
+          <pre>
+    p {
+       color: blue;
+    }
+            
+    .my-class {
+        color: red;
+    }
+            
+    #myId {
+       color: green;
+    }
+
+</pre
+          >
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-6">
+          <h4>4. How does the <span class="yellow">order of styles</span> change in CSS?</h4>
+
+          <form>
+            <div>
+              <input type="radio" name="order" id="order1" />
+              <label for="order1"> From top to bottom. </label>
+            </div>
+            <div>
+              <input type="radio" name="order" id="order2" />
+              <label for="order2"> From bottom to top. </label>
+            </div>
+            <div>
+              <input type="radio" name="order" id="order3" />
+              <label for="order3"> It doesn't matter; the order has no impact. </label>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-5">
+          <span class="pre-title">CSS:</span>
+          <pre>
+    p {
+      color: red; 
+    }
+    
+    p {
+      color: blue; 
+    }
+          </pre>
+        </div>
+      </div>
+      <hr />
+
+      <div class="row">
+        <div class="col-6">
+          <h4>5. What does the <span class="yellow">!important</span> expression mean in CSS?</h4>
+          <form>
+            <div>
+              <input type="radio" name="important" id="important1" />
+              <label for="important1">It instructs the browser to ignore that style declaration.</label>
+            </div>
+            <div>
+              <input type="radio" name="important" id="important2" />
+              <label for="important2">It gives higher priority to the style than others.</label>
+            </div>
+            <div>
+              <input type="radio" name="important" id="important3" />
+              <label for="important3">It is an error and should not be used.</label>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-5">
+          <span class="pre-title">CSS:</span>
+          <pre>
+    p {
+      color: blue !important;
+    }
+    
+    p {
+      color: red;
+    }
+    
+        </pre
+          >
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-6">
+          <h4>6. In <span class="yellow">BEM</span>, what is a "block"?</h4>
+
+          <form>
+            <div>
+              <input type="checkbox" name="bemBlock" id="bemBlock1" />
+              <label for="bemBlock1"> A standalone, reusable component that can contain multiple elements. </label>
+            </div>
+            <div>
+              <input type="checkbox" name="bemBlock" id="bemBlock2" />
+              <label for="bemBlock2"> A specific HTML tag used for structural purposes. </label>
+            </div>
+            <div>
+              <input type="checkbox" name="bemBlock" id="bemBlock3" />
+              <label for="bemBlock3"> A method for defining CSS styles in a hierarchical manner. </label>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-6">
+          <h4>
+            7. What is the <span class="yellow">syntax</span> used to represent the structure of a block, element and
+            modifier in BEM?
+          </h4>
+
+          <form>
+            <div>
+              <input type="radio" name="syntax" id="syntax1" />
+              <label for="syntax1">block &gt; element &lt; modifier</label>
+            </div>
+            <div>
+              <input type="radio" name="syntax" id="syntax2" />
+              <label for="syntax2">block.element..modifier</label>
+            </div>
+            <div>
+              <input type="radio" name="syntax" id="syntax3" />
+              <label for="syntax3">block__element--modifier</label>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <hr />
+      <hr />
+      <hr />
+
+      <div class="row">
+        <div class="col">
+          <img src="https://media.tenor.com/QWdPngpHxZ8AAAAC/family-guy-css.gif" alt="simple but not easy" />
+        </div>
+      </div>
+      <hr />
+      <hr />
+      <hr />
+    </section>
+  </body>
+</html>

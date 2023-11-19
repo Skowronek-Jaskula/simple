@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple but not Easy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <style>
+      .list {
+        display: flex;
+        gap: 1rem 2rem;
+        outline: 1px solid blueviolet;
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+
+      .list__item {
+        background: pink;
+      }
+
+      .rules {
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="nav">
+      <a href="/">home</a>
+      <a href="/inline-styling.html">inline styling</a>
+      <!-- 
+<a href="/class-naming.html">class naming</a>
+-->
+      <a href="/display-inline-block.html">display: inline / block</a>
+      <a class="current" href="/display-flex.html">flexbox</a>
+      <a href="/homeworks/homework1.html">homework 1</a>
+      <a href="/quizes/quiz-1.html">quiz 1</a>
+    </nav>
+    <h1>DISPLAY: FLEX</h1>
+
+    <ul class="list">
+      <h1 class="list__item">List element one</h1>
+      <p class="list__item">
+        List element two List element two List element two
+      </p>
+      <h3 class="list__item">
+        List element three List element three List element three
+      </h3>
+      <li class="list__item">List element 4 List element 4</li>
+      <li class="list__item">List element 5</li>
+    </ul>
+
+    <ul class="rules">
+      <li class="list__item">flex-direction</li>
+      <li class="list__item">flex-wrap</li>
+      <li class="list__item">(flex) flex-grow, flex-shrink, flex-basis</li>
+      <li class="list__item">flex-direction</li>
+      <li class="list__item">align-items (cross axis property)</li>
+      <li class="list__item">justify-content (main axis property)</li>
+      <li class="list__item">main axis (just a term)</li>
+      <li class="list__item">cross axis (just a term)</li>
+    </ul>
+  </body>
+</html>

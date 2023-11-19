@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple but not Easy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+
+  <body>
+    <h1>
+      We need a <span class="yellow">methodology</span> for naming CSS classes
+      for several reasons:
+    </h1>
+    <div class="theory">
+      <div class="theory theory--full-width">
+        <p class="theory__heading">
+          A methodology for naming CSS classes brings structure, clarity, and
+          efficiency to the development process, benefiting both individual
+          developers and collaborative teams working on web projects.
+        </p>
+        <ul class="theory__list">
+          <li class="theory__list-item"></li>
+
+          <li class="theory__list-item">
+            <b>Consistency:</b> Having a standardized naming convention helps
+            maintain consistency across different projects and makes it easier
+            for developers to understand and navigate the codebase. It ensures
+            that class names are predictable and follow a set pattern, making
+            the code more maintainable.
+          </li>
+
+          <li class="theory__list-item">
+            <b>Scalability:</b> As projects grow larger and more complex, it
+            becomes crucial to have a naming methodology that scales well. With
+            a consistent approach, it is easier to manage a large number of
+            styles and elements without conflicts or confusion.
+          </li>
+
+          <li class="theory__list-item">
+            <b>Collaboration:</b> When multiple developers work on the same
+            project, a naming methodology facilitates collaboration and
+            minimizes conflicts. It provides a shared vocabulary that allows
+            team members to communicate effectively about the styles and
+            components they are working on.
+          </li>
+
+          <li class="theory__list-item">
+            <b>Readability:</b> Clear and descriptive class names enhance the
+            readability of the code. When someone reviews or revisits the
+            codebase, intuitive and meaningful class names make it easier to
+            understand the purpose and context of each style rule.
+          </li>
+
+          <li class="theory__list-item">
+            <b>Maintainability:</b> A well-structured naming methodology
+            improves the maintainability of CSS code. By organizing styles into
+            logical categories and using meaningful names, it becomes simpler to
+            update or modify specific styles without affecting unrelated parts
+            of the codebase.
+          </li>
+
+          <li class="theory__list-item">
+            <b>Adaptability:</b> A consistent naming methodology makes it easier
+            to adapt and extend existing styles. When adding new features or
+            components, developers can quickly understand how to apply styles
+            based on the established naming conventions, reducing development
+            time and effort.
+          </li>
+        </ul>
+      </div>
+
+      <div class="theory__element">
+        <p class="theory__heading">
+          1. <span class="yellow">SMACSS</span> (Scalable and Modular
+          Architecture for CSS) Example:
+        </p>
+        <pre>
+  &lt;header class="<span class="yellow">layout-header</span>"&gt;
+    &lt;h1 class="<span class="yellow">base-heading</span>"&gt;SMACSS&lt;/h1&gt;
+    &lt;nav class="<span class="yellow">module-navigation</span>"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Main page&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  &lt;section class="<span class="yellow">layout-main</span>"&gt;
+    &lt;article class="<span class="yellow">module-article</span>"&gt;
+      &lt;h2 class="<span class="yellow">base-subheading</span>"&gt;Lorem ipsum&lt;/h2&gt;
+      &lt;p&gt;Lorem ipsum.&lt;/p&gt;
+      &lt;a href="#" class="<span class="yellow">module-button</span>"&gt;Czytaj dalej&lt;/a&gt;
+    &lt;/article&gt;
+    &lt;aside class="<span class="yellow">layout-sidebar</span>"&gt;
+      &lt;h3 class="<span class="yellow">base-subheading</span>"&gt;Categories&lt;/h3&gt;
+      &lt;ul class="<span class="yellow">module-list</span>"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Category 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Category 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Category 3&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/aside&gt;
+  &lt;/section&gt;
+  &lt;footer class="<span class="yellow">layout-footer</span>"&gt;
+    &lt;p&gt;&copy; 2023 SMACSS Example&lt;/p&gt;
+  &lt;/footer&gt;
+          
+        </pre>
+      </div>
+
+      <div class="theory__element">
+        <p class="theory__heading">
+          2. <span class="yellow">BEM</span> (Block Element Modifier)
+          methodology:
+        </p>
+        <pre>
+  &lt;header class="header"&gt;
+    &lt;h1 class="<span class="yellow">header__title</span>"&gt;Logo&lt;/h1&gt;
+    &lt;ul class="<span class="yellow">header__nav</span>"&gt;
+      &lt;li class="<span class="yellow">header__nav-item</span>"&gt;
+        &lt;a class="<span class="yellow">header__nav-link</span>" href="#"&gt;Home&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;li class="<span class="yellow">header__nav-item</span> <span class="yellow">header__nav-item--active</span>"&gt;
+        &lt;a class="<span class="yellow">header__nav-link</span>" href="#"&gt;About&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;li class="<span class="yellow">header__nav-item</span>"&gt;
+        &lt;a class="<span class="yellow">header__nav-link</span>" href="#"&gt;Contact&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/header&gt;
+      
+  &lt;section class="content"&gt;
+    &lt;h2 class="<span class="yellow">content__title</span>"&gt;Heading&lt;/h2&gt;
+    &lt;p class="<span class="yellow">content__text</span>"&gt;Lorem ipsum.&lt;/p&gt;
+  &lt;/section&gt;
+      
+  &lt;footer class="footer"&gt;
+    &lt;p class="<span class="yellow">footer__text</span>"&gt;2023 BEM Example&lt;/p&gt;
+  &lt;/footer&gt;
+        </pre>
+      </div>
+
+      <div class="theory__element">
+        <p class="theory__heading">
+          3. <span class="yellow">Atomic Design</span>
+        </p>
+        <pre>
+  &lt;div class="<span class="yellow">form</span> <span class="yellow">form--large</span>"&gt;
+    &lt;label class="<span class="yellow">label</span>" for="name"&gt;Name:&lt;/label&gt;
+    &lt;input class="<span class="yellow">input</span>" type="text" id="name" placeholder="Enter your name"&gt;
+    &lt;button class="<span class="yellow">button</span>"&gt;Submit&lt;/button&gt;
+    &lt;div class="<span class="yellow">dropdown</span>"&gt;
+      &lt;button class="<span class="yellow">dropdown__button</span>"&gt;Dropdown&lt;/button&gt;
+      &lt;ul class="<span class="yellow">dropdown__menu</span>"&gt;
+        &lt;li class="<span class="yellow">dropdown__item</span>"&gt;Option 1&lt;/li&gt;
+        &lt;li class="<span class="yellow">dropdown__item</span>"&gt;Option 2&lt;/li&gt;
+        &lt;li class="<span class="yellow">dropdown__item</span>"&gt;Option 3&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="<span class="yellow">typeahead</span>"&gt;
+      &lt;input class="<span class="yellow">typeahead__input</span>" type="text" placeholder="Search..."&gt;
+      &lt;ul class="<span class="yellow">typeahead__menu</span>"&gt;
+        &lt;li class="<span class="yellow">typeahead__item</span>"&gt;Result 1&lt;/li&gt;
+        &lt;li class="<span class="yellow">typeahead__item</span>"&gt;Result 2&lt;/li&gt;
+        &lt;li class="<span class="yellow">typeahead__item</span>"&gt;Result 3&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+        </pre>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="/">home</a>
+      <a href="/inline-styling.html">inline styling</a>
+      <a class="current" href="/class-naming.html">class naming</a>
+      <a href="/display-inline-block.html">display: inline / block</a>
+      <a href="/display-flex.html">flexbox</a>
+      <a href="/homeworks/homework1.html">homework 1</a>
+      <a href="/quizes/quiz-1.html">quiz 1</a>
+    </nav>
+  </body>
+</html>
