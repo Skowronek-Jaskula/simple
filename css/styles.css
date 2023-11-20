@@ -34,6 +34,10 @@ h1 {
   padding: 1.5rem 2rem;
 }
 
+.theory__element--lime {
+  background-color: lime;
+}
+
 .theory__heading {
   font-weight: 600;
   margin-bottom: 1rem;

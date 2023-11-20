@@ -49,10 +49,7 @@
         const alertColor =
           getComputedStyle(root).getPropertyValue("--sbne-color-alert");
         if (root && alertColor) {
-          par.style.color =
-            par.style.color !== "var(--sbne-color-alert)"
-              ? "var(--sbne-color-alert)"
-              : "";
+          par.style.color = par.style.color !== "red" ? "red" : "";
         }
       }
     }

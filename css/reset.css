@@ -38,3 +38,7 @@ a:focus {
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
 }
+
+img {
+  max-width: 100%;
+}
